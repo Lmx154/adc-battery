@@ -1,0 +1,16 @@
+[package]
+name = "adc-battery"
+version = "0.1.0"
+edition = "2024"
+publish = false
+license = "MIT"
+description = "Battery voltage, battery current and charge used from raw ADC conversions. Pure integer arithmetic, no I/O."
+
+[features]
+defmt = ["dep:defmt"]
+
+[dependencies]
+defmt = { version = "1.0.1", optional = true }
+
+[dev-dependencies]
+proptest = "1.12"
