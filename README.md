@@ -4,6 +4,10 @@ Battery voltage, battery current and charge used from raw ADC conversions, `no_s
 
 Status: version 0.1.0, `publish = false`, and the API may still change. It has been tested on a host, and `hil/adc_battery_smoke` has fed it from the RP2350 ADC on a MARV V2 Rev 1 board twice (2026-11-12, see "Measured on the MARV V2 Rev 1 board"). The battery voltage was compared with a multimeter at two voltages (15.24 V and 16.82 V): untrimmed the board reads 0.75 % low, and with a one-point trim of +7603 ppm for this board it was 0.08 % from the meter at the second voltage. The trim is the caller's to apply (`trimmed_to`) and no firmware applies it yet; the meter's own accuracy is not known. The current scale is NOT calibrated: it needs a real load.
 
+## Works with
+
+The crate does no I/O and has no dependencies, so it works with any HAL and any MCU: the caller reads the ADC however it likes and passes the sums in. No embassy crate is needed.
+
 ## Quick start
 
 ```rust

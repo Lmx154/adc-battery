@@ -5,6 +5,11 @@ edition = "2024"
 publish = false
 license = "MIT"
 description = "Battery voltage, battery current and charge used from raw ADC conversions. Pure integer arithmetic, no I/O."
+repository = "https://github.com/Lmx154/adc-battery"
+readme = "README.md"
+keywords = ["embedded", "no-std", "driver", "adc", "battery"]
+categories = ["embedded", "no-std", "no-std::no-alloc", "hardware-support"]
+rust-version = "1.99"
 
 [features]
 defmt = ["dep:defmt"]
